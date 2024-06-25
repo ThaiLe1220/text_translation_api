@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dịch sách tiếng Anh, sách tiếng Việt, sách kinh điển, sách ngoại văn, sách nước ngoài. Biên dịch và phiên dịch chuyên nghiệp, học tiếng Anh bằng cách đọc sách, luyện dịch tiếng Anh.">
+    <meta name="keywords" content="dịch sách, sách tiếng Anh, sách tiếng Việt, sách kinh điển, sách ngoại văn, sách nước ngoài, biên dịch, phiên dịch, học tiếng Anh bằng cách đọc sách, luyện dịch tiếng Anh">
+    <meta name="author" content="Your Name or Company">
+    <meta name="robots" content="index, follow">
+    <title>Dịch Sách - Sách Tiếng Anh và Tiếng Việt | Biên Dịch Chuyên Nghiệp</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Dịch Sách - Sách Tiếng Anh và Tiếng Việt | Biên Dịch Chuyên Nghiệp">
+    <meta property="og:description" content="Dịch sách tiếng Anh, sách tiếng Việt, sách kinh điển, sách ngoại văn, sách nước ngoài. Biên dịch và phiên dịch chuyên nghiệp, học tiếng Anh bằng cách đọc sách, luyện dịch tiếng Anh.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://vietgutenberg.org">
+    <meta property="og:image" content="https://vietgutenberg.org/thumbnail.jpg">
+    
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dịch Sách - Sách Tiếng Anh và Tiếng Việt | Biên Dịch Chuyên Nghiệp">
+    <meta name="twitter:description" content="Dịch sách tiếng Anh, sách tiếng Việt, sách kinh điển, sách ngoại văn, sách nước ngoài. Biên dịch và phiên dịch chuyên nghiệp, học tiếng Anh bằng cách đọc sách, luyện dịch tiếng Anh.">
+    <meta name="twitter:image" content="https://vietgutenberg.org/circulaailogo.jpg">
+
+    <link rel="canonical" content="https://vietgutenberg.org/">
+    <link rel="icon" href="https://vietgutenberg.org/favicon.ico" type="image/x-icon">
+
+    <!-- Other useful meta tags -->
+    <meta name="theme-color" content="#ffffff">
+    <meta name="format-detection" content="telephone=no">
+    <title>Dịch sách</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .card {
+            margin-bottom: 20px;
+        }
+        #progress-bar-container {
+            display: none;
+            text-align: center;
+        }
+        #progress-bar {
+            width: 50%;
+            margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+
+
+<div class="container">
+    
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#aboutModal">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#roadmapModal">Road Map</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#contactModal">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="jumbotron">
+        <h1 class="display-4">Dự án dịch sách Gutenberg</h1>
+        <p class="lead">Đọc cả thế giới bằng tiếng Việt, tiếng mẹ ru</p>
+        <hr class="my-4">
+        <p>Chứa đựng hơn 28 ngàn cuốn sách kinh điển bằng tiếng Anh</p>
+        <p class="lead">
+          <a class="btn btn-primary btn-lg" href="#" role="button">Tìm hiểu thêm</a>
+        </p>
+      </div>
+
+    <h1 class="my-4">Book List</h1>
+    <div class="row mb-3">
+        <div class="col-md-3">
+            <input type="text" id="search-input" class="form-control" placeholder="Search">
+        </div>
+        <div class="col-md-3">
+            <button id="search-button" class="btn btn-primary mb-3">Search</button>
+        </div>
+    </div>
+
+    <div id="progress-bar-container">
+        <div class="progress" id="progress-bar">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width:100%"></div>
+        </div>
+    </div>
+    <div id="book-list" class="row"></div>
+    <!-- About Us Modal -->
+    <div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="aboutModalLabel">Về chúng tôi</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Dự án này nhằm cung cấp bản dich miễn phí sang tiếng Việt cho toàn bộ sách trong kho dữ liệu sách mở Gutenburg.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Road Map Modal -->
+    <div class="modal fade" id="roadmapModal" tabindex="-1" aria-labelledby="roadmapModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="roadmapModalLabel">Road Map</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Chúng tôi dự định thêm nhiều ngôn ngữ hơn, cải thiện chất lượng dịch thuật và mở rộng bộ sưu tập sách. Chúng tôi cần sự giúp đỡ tình nguyện của các bạn.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Modal -->
+    <div class="modal fade" id="contactModal" tabindex="-1" aria-labelledby="contactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="contactModalLabel">Contact</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>Bạn có thể liên hệ với chúng tôi tại thanhngocnguyenau@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Contact Modal -->
+    <div class="modal fade" id="translateModal" tabindex="-1" aria-labelledby="translateModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="translateModalLabel">Dịch sang tiếng Việt</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                 
+                    <form id="uploadForm" enctype="multipart/form-data">
+                        <div class="mb-3">
+                            <label for="file" class="form-label">Choose a file:</label>
+                            <input type="file" class="form-control" id="file" name="file" required>
+                        </div>
+                       
+                        <div class="mb-3">
+                            <label for="recipient_email" class="form-label">Recipient email:</label>
+                            <input type="email" class="form-control" id="recipient_email" name="recipient_email" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal" onclick=" $('#translateModal').modal('hide');">Close</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Include Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+    let currentPage = 1;
+
+    function loadFilters() {
+        $.get('/api/filters', function(filters) {
+            $('#author-filter').append(filters.Author.map(value => `<option value="${value}">${value}</option>`));
+            $('#loc-class-filter').append(filters['LoC Class'].map(value => `<option value="${value}">${value}</option>`));
+            $('#subjects-filter').append(filters.Subjects.map(value => `<option value="${value}">${value}</option>`));
+        });
+    }
+
+    function loadBooks(page = 1, append = false) {
+        $('#progress-bar-container').show();
+        const searchQuery = $('#search-input').val();
+        const author = $('#author-filter').val();
+        const locClass = $('#loc-class-filter').val();
+        const subjects = $('#subjects-filter').val();
+
+        $.get('/api/books', {
+            page: page,
+            search: searchQuery,
+            Author: author,
+            'LoC Class': locClass,
+            Subjects: subjects
+        }, function(books) {
+            if (!append) {
+                $('#book-list').empty();
+            }
+
+            books.forEach(book => {
+                $('#book-list').append(`
+                    <div class="col-md-4">
+                        <div class="card">
+                            <img src="${book['Cover Image URL']}" class="card-img-top" alt="${book.Title}">
+                            <div class="card-body">
+                                <h5 class="card-title">${book.Title}</h5>
+                                <p class="card-text">Author: ${book.Author}</p>
+                                <p class="card-text">Illustrator: ${book.Illustrator}</p>
+                                <p class="card-text">Original Publication: ${book['Original Publication']}</p>
+                                <p class="card-text">Language: ${book.Language}</p>
+                                <p class="card-text">LoC Class: ${book['LoC Class']}</p>
+                                <p class="card-text">Subjects: ${book.Subjects}</p>
+                                <p class="card-text">Category: ${book.Category}</p>
+                                <p class="card-text">Release Date: ${book['Release Date']}</p>
+                                <p class="card-text">Downloads: ${book.Downloads}</p>
+                                <button class="btn btn-primary" onclick="downloadEnglish('${book['EBook-No.']}')">English</button>
+                                <button class="btn btn-secondary" onclick="downloadVietnamese('${book['EBook-No.']}', '${book.Title}')">Vietnamese</button>
+                            </div>
+                        </div>
+                    </div>
+                `);
+            });
+            $('#progress-bar-container').hide();
+        });
+    }
+
+    function downloadEnglish(bookId) {
+        const url = `https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}.txt`;
+        window.open(url, '_blank');
+    }
+
+    
+    async function downloadAndAttach(bookId, bookTitle, url) {            
+        async function downloadAndAttach(bookId, bookTitle, url) {
+                const proxyUrl = `https://cors-anywhere.herokuapp.com/${url}`;
+                try {
+                    const response = await fetch(proxyUrl);
+                    if (!response.ok) {
+                        throw new Error('Network response was not ok ' + response.statusText);
+                    }
+
+                    const text = await response.text();
+                    const blob = new Blob([text], { type: 'text/plain' });
+                    const file = new File([blob], `${bookId}_${bookTitle}.txt`, { type: 'text/plain' });
+
+                    // Create a DataTransfer object and add the file to it
+                    const dataTransfer = new DataTransfer();
+                    dataTransfer.items.add(file);
+
+                    // Attach the file to the file input
+                    const fileInput = document.getElementById('file');
+                    fileInput.files = dataTransfer.files;
+
+                    console.log('File downloaded and attached successfully');
+                } catch (error) {
+                    console.error('Error downloading or attaching the file:', error);
+                }
+            }
+
+        }
+
+    //$("#translateModal").modal()
+    function downloadVietnamese(bookId, bookTitle) {
+        $("#translateModal").modal()
+        const url = `https://www.gutenberg.org/cache/epub/${bookId}/pg${bookId}.txt`;
+        downloadAndAttach(bookId, bookTitle, url)
+    }
+
+    $(document).ready(function() {
+        // loadFilters();
+        loadBooks();
+
+        $('#search-button').click(function() {
+            currentPage = 1;
+            loadBooks(currentPage);
+        });
+
+        $(window).scroll(function() {
+            if ($(window).scrollTop() + $(window).height() >= $(document).height() - 100) {
+                currentPage++;
+                loadBooks(currentPage, true);
+            }
+        });
+    });
+</script>
+<script>
+    document.getElementById('uploadForm').addEventListener('submit', function (e) {
+        e.preventDefault();
+        var formData = new FormData();
+        var fileInput = document.getElementById('file');
+        formData.append('file', fileInput.files[0]);
+        formData.append('source_lang','en');
+        formData.append('target_lang','vi');
+        formData.append('recipient_email', document.getElementById('recipient_email').value);
+
+        fetch('https://web.booktranslate.uk/upload', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Error uploading file to S3');
+                }
+            })
+            .then(data => {
+                console.log(data);
+                alert('File uploaded successfully!');
+                $('#translateModal').modal('hide');
+
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('Error uploading file. Please try again.');
+            });
+    });
+</script>
+</body>
+</html>

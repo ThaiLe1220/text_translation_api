@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <!-- Meta tags -->
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Translate your books into multiple languages for free with our online book translation service. Upload your book files and receive high-quality translations.">
+     <meta name="keywords" content="book translation, free book translation, online book translation, multiple languages">
+ 
+     <!-- Open Graph meta tags for social media sharing -->
+     <meta property="og:title" content="Book Translation Service">
+     <meta property="og:description" content="Translate your books into multiple languages for free with our online book translation service.">
+     <meta property="og:type" content="website">
+     <meta property="og:url" content="https://booktranslate.uk">
+     <meta property="og:image" content="https://booktranslate.uk/thumbnail.jpg">
+     <meta property="og:site_name" content="Book Translation Service">
+     <meta property="og:image:width" content="1200">
+     <meta property="og:image:height" content="630">
+     <link rel="icon" type="image/x-icon" href="https://booktranslate.uk/favicon.ico">
+
+    <title>Book Translation</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 20px;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0069d9;
+            border-color: #0062cc;
+        }
+
+        /* Add flag emojis */
+        .flag {
+            margin-right: 5px;
+        }
+
+        .jumbotron {
+            padding: 2rem 1rem;
+            margin-bottom: 2rem;
+            background-color: #e9ecef;
+            border-radius: 0.3rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Free Book Translation Service</h1>
+        <p class="lead">High Quality, Reliable, Multi-Language Translations</p>
+    </div>
+
+    <div class="container">
+        <h1 class="mt-5">Book Translation</h1>
+        <form id="uploadForm" enctype="multipart/form-data">
+            <div class="mb-3">
+                <label for="file" class="form-label">Choose a file .txt file:</label>
+                <input type="file" class="form-control" id="file" name="file" accept=".txt" required>
+            </div>
+            <div class="mb-3">
+                <label for="source_lang" class="form-label">Source language:</label>
+                <select class="form-select" id="source_lang" name="source_lang" required>
+                    <option value="">Select source language</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="vi">🇻🇳 Vietnamese</option>
+                    <!-- Add flag emojis for common languages -->
+                    <option value="ar">🇸🇦 Arabic</option>
+                    <option value="bn">🇧🇩 Bengali</option>
+                    <option value="zh">🇨🇳 Chinese</option>
+                    <option value="fr">🇫🇷 French</option>
+                    <option value="de">🇩🇪 German</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                    <option value="id">🇮🇩 Indonesian</option>
+                    <option value="it">🇮🇹 Italian</option>
+                    <option value="ja">🇯🇵 Japanese</option>
+                    <option value="jv">🇮🇩 Javanese</option>
+                    <option value="ko">🇰🇷 Korean</option>
+                    <option value="ms">🇲🇾 Malay</option>
+                    <option value="mr">🇮🇳 Marathi</option>
+                    <option value="pa">🇮🇳 Punjabi</option>
+                    <option value="pt">🇵🇹 Portuguese</option>
+                    <option value="ru">🇷🇺 Russian</option>
+                    <option value="es">🇪🇸 Spanish</option>
+                    <option value="ta">🇮🇳 Tamil</option>
+                    <option value="te">🇮🇳 Telugu</option>
+                    <option value="th">🇹🇭 Thai</option>
+                    <option value="tr">🇹🇷 Turkish</option>
+                    <option value="ur">🇵🇰 Urdu</option>
+                    <option value="vi">🇻🇳 Vietnamese</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="target_lang" class="form-label">Target language:</label>
+                <select class="form-select" id="target_lang" name="target_lang" required>
+                    <option value="">Select target language</option>
+                    <option value="en">🇺🇸 English</option>
+                    <option value="vi">🇻🇳 Vietnamese</option>
+                    <!-- Add flag emojis for common languages -->
+                    <option value="ar">🇸🇦 Arabic</option>
+                    <option value="bn">🇧🇩 Bengali</option>
+                    <option value="zh">🇨🇳 Chinese</option>
+                    <option value="fr">🇫🇷 French</option>
+                    <option value="de">🇩🇪 German</option>
+                    <option value="hi">🇮🇳 Hindi</option>
+                    <option value="id">🇮🇩 Indonesian</option>
+                    <option value="it">🇮🇹 Italian</option>
+                    <option value="ja">🇯🇵 Japanese</option>
+                    <option value="jv">🇮🇩 Javanese</option>
+                    <option value="ko">🇰🇷 Korean</option>
+                    <option value="ms">🇲🇾 Malay</option>
+                    <option value="mr">🇮🇳 Marathi</option>
+                    <option value="pa">🇮🇳 Punjabi</option>
+                    <option value="pt">🇵🇹 Portuguese</option>
+                    <option value="ru">🇷🇺 Russian</option>
+                    <option value="es">🇪🇸 Spanish</option>
+                    <option value="ta">🇮🇳 Tamil</option>
+                    <option value="te">🇮🇳 Telugu</option>
+                    <option value="th">🇹🇭 Thai</option>
+                    <option value="tr">🇹🇷 Turkish</option>
+                    <option value="ur">🇵🇰 Urdu</option>
+                    <option value="vi">🇻🇳 Vietnamese</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="recipient_email" class="form-label">Recipient email:</label>
+                <input type="email" class="form-control" id="recipient_email" name="recipient_email" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.getElementById('uploadForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            var formData = new FormData();
+            var fileInput = document.getElementById('file');
+            formData.append('file', fileInput.files[0]);
+            formData.append('source_lang', document.getElementById('source_lang').value);
+            formData.append('target_lang', document.getElementById('target_lang').value);
+            formData.append('recipient_email', document.getElementById('recipient_email').value);
+
+            fetch('https://booktranslate.uk/upload', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        throw new Error('Error uploading file to S3');
+                    }
+                })
+                .then(data => {
+                    console.log(data);
+                    alert('File uploaded successfully!');
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('Error uploading file. Please try again.');
+                });
+        });
+    </script>
+</body>
+</html>
